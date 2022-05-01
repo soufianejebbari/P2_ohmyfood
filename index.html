@@ -6,36 +6,39 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://kit.fontawesome.com/93a6073045.js" crossorigin="anonymous"></script>
-    <link href="style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
     <header id="logo-omf">
         <img src="images/logo/ohmyfood.png" alt="logo oh my food">
+        <div class="localisation">
+        <div id="map"><i class="fas fa-map-marker-alt"></i>
+            <span>Paris, Belleville</span>
+        </div>
+        </div>
+
+        <div class="hero">
+            <h1>Réservez le menu qui vous convient</h1>
+            <p>Découvrez des restaurants d'exception , séléctionnés par nos soins</p>
+            <button>Explorer nos restaurants</button>
+
+        </div>
     </header>
 
     <main>
-        <section class="localisation">
-            <div id="map"><i class="fas fa-map-marker-alt"></i>
-                <span>Paris, Belleville</span>
-            </div>
-        </section>
-
-        <section class="hero">
-            <h1>Réservez le menu qui vous convient</h1>
-            <p>Découvrez des restaurants d'exception , séléctionnés par nos soins</p>
-            <a href="">
-                <bouton>Explorer nos restaurants</bouton>
-            </a>
-        </section>
-
-        <section class="hiw">
+           <section class="hiw">
             <h1>Fonctionnement</h1>
-            <ol class="hiw_steps">
-                <li>Choisissez un restaurant</li>
-                <li>Composez votre menu</li>
-                <li>Déguster au restaurant</li>
-            </ol>
+            <div> class="hiw_steps">
+                <a href="#">
+                    <span>1</span>
+                    <i></i>
+                    <p>Choissez un restaurant</p>
+                </a>
+                <i>Choisissez un restaurant</i>
+                <i>Composez votre menu</i>
+                <i>Déguster au restaurant</i>
+            </div>
         </section>
 
         <section id="restaurants">
@@ -51,7 +54,7 @@
             <li>Proposer un restaurant</li>
             <li>Devenir partenaire</li>
             <li>Mentions légales</li>
-            <li>Contact</li>
+            <li><a href="mailto:totogmail.com"> Contact</a> </li>
         </ul>
     </div>
 </footer>
