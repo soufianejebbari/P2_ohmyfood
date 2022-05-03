@@ -1,3 +1,5 @@
-
 @import './utils/variables';
-@import './base/test';
+@import 'base/base';
+@import "components/buttons";
+@import './pages/index';
+@import "./layout/nav";
