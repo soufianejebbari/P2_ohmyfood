@@ -1,5 +1,9 @@
 @import './utils/variables';
 @import 'base/base';
+@import 'base/typography';
 @import "components/buttons";
+@import "layout/footer";
+@import "layout/header";
+@import "layout/nav";
+@import "layout/cards";
 @import './pages/index';
-@import "./layout/nav";

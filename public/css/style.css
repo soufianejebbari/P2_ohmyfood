@@ -3,11 +3,93 @@ body, html {
   font-family: "Roboto", sans-serif;
 }
 
+h1 {
+  font-size: 1.5rem;
+}
+
+header .hero button {
+  background-color: rgba(201, 39, 180, 0.76);
+  color: white;
+  padding: 1rem;
+  border-radius: 4rem;
+  align-items: center;
+}
+
+footer {
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+header {
+  background-color: rgb(246, 245, 245);
+}
+header #logo-omf {
+  text-align: center;
+  background-color: white;
+  font-size: 1rem;
+}
+header h1 {
+  text-align: center;
+}
+header p {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: lighter;
+  margin: 1rem 1.5rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+
+.card {
+  background-color: white;
+  border-radius: 1rem;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.card .card_img {
+  height: 12rem;
+  width: 100%;
+  border: transparent solid 0px;
+  border-radius: 1rem 1rem 0 0;
+  box-shadow: none;
+  object-fit: cover;
+}
+.card .card_badge {
+  background-color: #8dd0bf;
+  color: #8dd0bf, 50%;
+  padding: 0.5rem;
+  border-radius: 0.125rem;
+  position: absolute;
+  top: 1rem;
+  right: 0.75rem;
+}
+
 .localisation {
   display: flex;
   justify-content: center;
-  background-color: rgb(51, 201, 12);
+  background-color: rgb(224, 223, 223);
   font-size: 1.3rem;
+  border-top: rgb(246, 245, 245);
+  border-top-style: solid;
+  padding: 5px;
+}
+
+.tuto .tuto_step {
+  padding: 1.5rem;
+  margin: 1.5rem 0 1rem 0.75rem;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+  border-radius: 1.25rem;
+  background-color: #f6f6f6;
+  display: flex;
   position: relative;
 }
 
