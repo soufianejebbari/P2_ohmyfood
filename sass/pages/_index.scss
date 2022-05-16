@@ -5,17 +5,20 @@
   font-size: 1.3rem;
   border-top: $light-gray;
   border-top-style: solid;
-  padding: 5px;
 }
 
-.tuto{
+.hero {
+  text-align: center;
+  background-color: $light-gray;
+}
+
+
+.tuto {
   .tuto_step {
     padding: 1.5rem;
     margin: 1.5rem 0 1rem 0.75rem;
     box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
     border-radius: 1.25rem;
     background-color: #f6f6f6;
-    display: flex;
-    position: relative;
   }
 }
