@@ -9,21 +9,23 @@
   background-color: #353535;
 
   .container {
-    margin: 1rem;
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    padding: 2rem;
+
+
   }
 
   &_logo {
-    color: white;
-    font-family: "Shrikhand", "cursive";
-    margin: 0;
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
+    object-fit: scale-down;
+
+    img {
+      color: white;
+    }
   }
 
   &_list {
+
     list-style: none;
     padding: 0;
     margin: 0;

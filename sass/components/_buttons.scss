@@ -1,6 +1,17 @@
-.hero button {
-  background-color: $gradient;
+button {
+  background-image: $bg-button;
   color: white;
   padding: 1rem;
+  padding-inline: 4rem;
   border-radius: 4rem;
+  font-weight: bold;
+  cursor: pointer;
 }
+
+  .btn_order {
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+    width: auto;
+    }
+
