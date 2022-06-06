@@ -6,4 +6,4 @@ $color-tertiary: #8dd0bf;
 $light-gray: rgb(246, 245, 245);
 $dark-gray: rgb(224, 223, 223);
 $gradient: rgba(201, 39, 180, 0.76);
-$bg-button: linear-gradient(to top, rgba(96, 37, 197, 0.93), 15%, rgba(247, 128, 252, 0.82));
+$bg-button: linear-gradient(0deg, $color-primary 0%,$color-secondary 100%);
