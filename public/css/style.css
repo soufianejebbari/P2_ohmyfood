@@ -1,5 +1,5 @@
 body, html {
-  margin: 0;
+  margin: 0 auto;
   font-family: "Roboto", sans-serif;
 }
 
@@ -137,6 +137,39 @@ header p {
 .card .card_footer {
   justify-content: space-between;
 }
+.card .fa-heart {
+  position: relative;
+}
+.card .fa-heart:hover {
+  transition: opacity 200ms ease-in-out;
+}
+.card .fa-heart:hover::after {
+  opacity: 0;
+}
+.card .fa-heart:hover::before {
+  opacity: 1;
+}
+.card .fa-heart::after {
+  opacity: 1;
+  font-weight: 100;
+  align-self: center;
+  transition: opacity 400ms ease-in;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: "\f004";
+}
+.card .fa-heart::before {
+  opacity: 0;
+  background: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: opacity 400ms ease-out;
+  font-weight: 600;
+}
 
 .menu_header {
   display: flex;
@@ -202,18 +235,22 @@ header p {
   display: flex;
   justify-content: space-between;
 }
+.last_line p {
+  margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 
 .cross {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #8dd0bf;
-  width: 50px;
-  height: 90px;
+  width: 90px;
+  height: 100%;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   position: absolute;
-  padding: 20px;
   right: -50px;
   top: 0;
   opacity: 0;
@@ -241,12 +278,36 @@ header p {
   padding-bottom: 3rem;
 }
 
-.tuto .tuto_step {
+.tuto_step {
   padding: 1.5rem;
-  margin: 1.5rem 0 1rem 0.75rem;
+  margin: 1rem 0 1rem 0.75rem;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
   border-radius: 1.25rem;
   background-color: #f6f6f6;
+  display: flex;
+  position: relative;
+}
+.tuto_step_number {
+  z-index: 1;
+  background-color: #9356DC;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: absolute;
+  left: -0.75rem;
+}
+.tuto_step_content {
+  font-weight: bold;
+}
+.tuto_step_content .tuto_icon {
+  margin-right: 3rem;
+  margin-left: 2rem;
+  color: #7e7e7e;
+  font-size: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
