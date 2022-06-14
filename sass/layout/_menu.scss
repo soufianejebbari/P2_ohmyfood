@@ -66,6 +66,12 @@
 .last_line {
   display: flex;
   justify-content: space-between;
+
+  p {
+    margin: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
 }
 
 .cross {
@@ -73,12 +79,12 @@
   justify-content: center;
   align-items: center;
   background-color: $color-tertiary;
-  width: 50px;
-  height: 90px;
+  width: 90px;
+  height: 100%;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   position: absolute;
-  padding: 20px;
+  // padding: 20px;
   right: -50px;
   top: 0;
   opacity: 0;
