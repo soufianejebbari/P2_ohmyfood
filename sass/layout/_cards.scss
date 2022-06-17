@@ -68,14 +68,11 @@
   .fa-heart::before {
     opacity: 0;
     background: linear-gradient(#9356DC, #FF79DA);
-    background-clip: text;
+    #background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: opacity 400ms ease-out;
     font-weight: 600;
   }
-
-  // HEART
-
 }
 

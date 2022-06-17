@@ -2,10 +2,16 @@
   display: flex;
   justify-content: center;
   background-color: $dark-gray;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
+  font-weight: 400;
   border-top: $light-gray;
   border-top-style: solid;
   padding: 11px;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+   i {
+     position: relative;
+     right: 25px;
+  }
 }
 
 .hero {
@@ -26,8 +32,26 @@
     background-color: #f6f6f6;
     display: flex;
     position: relative;
-  }
+    cursor: pointer;
 
+    &:hover {
+      background-color: #E5CDEE;
+    }
+
+    &:hover i {
+      color: $color-primary;
+    }
+  }
+  &_step_content {
+    font-weight: 500;
+
+    .tuto_icon {
+      margin-right: 3rem;
+      margin-left: 2rem;
+      color: #7e7e7e;
+      font-size: 20px;
+    }
+  }
   &_step_number {
     z-index: 1;
     background-color: $color-primary;
@@ -40,16 +64,6 @@
     color: white;
     position: absolute;
     left: -0.75rem;
-  }
-
-  &_step_content {
-    font-weight: bold;
-    .tuto_icon {
-      margin-right: 3rem;
-      margin-left: 2rem;
-      color: #7e7e7e;
-      font-size: 20px;
-    }
   }
 }
 
