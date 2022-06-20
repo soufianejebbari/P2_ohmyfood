@@ -1,3 +1,30 @@
+.loader {
+  background-color: rgba(255, 255, 255, 0.90);
+  z-index: 10;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.loader:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid;
+  border-color: $color-primary transparent $color-secondary transparent;
+  animation: loader 1s ease-in-out 3s forwards;
+}
+
+
 .localisation {
   display: flex;
   justify-content: center;
@@ -8,9 +35,10 @@
   border-top-style: solid;
   padding: 11px;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
-   i {
-     position: relative;
-     right: 25px;
+
+  i {
+    position: relative;
+    right: 25px;
   }
 }
 
@@ -23,6 +51,11 @@
 
 
 .tuto {
+    @media (min-width: 64rem) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 1rem;
+    }
 
   &_step {
     padding: 1.5rem;
@@ -34,6 +67,7 @@
     position: relative;
     cursor: pointer;
 
+
     &:hover {
       background-color: #E5CDEE;
     }
@@ -42,6 +76,7 @@
       color: $color-primary;
     }
   }
+
   &_step_content {
     font-weight: 500;
 
@@ -51,7 +86,9 @@
       color: #7e7e7e;
       font-size: 20px;
     }
+
   }
+
   &_step_number {
     z-index: 1;
     background-color: $color-primary;
@@ -65,5 +102,7 @@
     position: absolute;
     left: -0.75rem;
   }
+
+
 }
 

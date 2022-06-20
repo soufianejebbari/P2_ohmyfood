@@ -1,3 +1,23 @@
+@keyframes loader {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+@keyframes menuAppearance {
+  from {
+    transform: translateY(100%);
+    opacity: 0.5;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 body, html {
   margin: 0 auto;
   font-family: "Roboto", sans-serif;
@@ -90,13 +110,14 @@ header {
 header .logo {
   background-color: white;
   padding: 5px;
+  text-align: center;
 }
 header .logo img {
   background-color: white;
   font-size: 1rem;
   max-width: 50%;
   max-height: 32rem;
-  width: 100%;
+  #width: 100%;
   object-fit: cover;
 }
 header h1 {
@@ -112,6 +133,12 @@ header p {
 .cards {
   display: grid;
   row-gap: 2rem;
+}
+@media (min-width: 64rem) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
 }
 
 .card {
@@ -179,13 +206,14 @@ header p {
 
 .menu_header {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
   background-color: white;
 }
 .menu_header .arrow {
   font-size: 20px;
   margin: 1rem;
+  left: 3rem;
+  position: absolute;
 }
 
 .header_img img {
@@ -204,6 +232,18 @@ header p {
   margin-top: -50px;
 }
 
+.starter {
+  animation: menuAppearance 1s ease-in-out;
+}
+
+.dish_title {
+  animation: menuAppearance 1.1s ease-in-out;
+}
+
+.meals {
+  animation: menuAppearance 1.2s ease-in-out;
+}
+
 .menu_title {
   font-family: "Shrikhand", "cursive";
   font-weight: lighter;
@@ -220,6 +260,16 @@ header p {
   margin-left: 1rem;
   position: relative;
   bottom: 2rem;
+}
+
+.full_menu {
+  display: grid;
+}
+@media (min-width: 64rem) {
+  .full_menu {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+  }
 }
 
 .meals {
@@ -276,6 +326,31 @@ header p {
   transition: transform 500ms ease-in-out;
 }
 
+.loader {
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 10;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid;
+  border-color: #9356DC transparent #FF79DA transparent;
+  animation: loader 1s ease-in-out 3s forwards;
+}
+
 .localisation {
   display: flex;
   justify-content: center;
@@ -299,6 +374,13 @@ header p {
   padding-bottom: 3rem;
 }
 
+@media (min-width: 64rem) {
+  .tuto {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+  }
+}
 .tuto_step {
   padding: 1.5rem;
   margin: 1rem 0 1rem 0.75rem;
