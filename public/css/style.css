@@ -1,13 +1,3 @@
-@keyframes loader {
-  0% {
-    opacity: 1;
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-    opacity: 0;
-  }
-}
 @keyframes menuAppearance {
   from {
     transform: translateY(100%);
@@ -18,13 +8,151 @@
     opacity: 1;
   }
 }
+.loader {
+  color: red;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  animation-fill-mode: forwards;
+}
+
+.loader div {
+  animation: lds-spinner 1.2s linear;
+  animation-fill-mode: backwards;
+  animation-iteration-count: 1;
+}
+
+.loader div:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: red transparent blue transparent;
+  animation: lds-spinner 1.2s linear infinite;
+}
+
+@keyframes lds-spinner {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(360deg);
+  }
+}
+header, main, footer {
+  opacity: 0;
+  animation: corps 1s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes corps {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.localisation {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(224, 223, 223);
+  font-size: 1.1rem;
+  font-weight: 400;
+  border-top: rgb(246, 245, 245);
+  border-top-style: solid;
+  padding: 11px;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+}
+.localisation i {
+  position: relative;
+  right: 25px;
+}
+
+.hero {
+  text-align: center;
+  background-color: rgb(246, 245, 245);
+  padding: 2rem;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 64rem) {
+  .tuto {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+  }
+}
+.tuto_step {
+  padding: 1.4rem;
+  margin: 1rem 0 1rem 0.75rem;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+  border-radius: 1.25rem;
+  background-color: #f6f6f6;
+  position: relative;
+  cursor: pointer;
+}
+.tuto_step:hover {
+  background-color: #E5CDEE;
+}
+.tuto_step:hover i {
+  color: #9356DC;
+}
+.tuto .tuto_icon {
+  margin-right: 1rem;
+  margin-left: 1rem;
+  color: #7e7e7e;
+}
+.tuto_step_content {
+  font-weight: 500;
+}
+.tuto_step_number {
+  z-index: 1;
+  background-color: #9356DC;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: absolute;
+  left: -0.75rem;
+}
+
+.tuto_container {
+  margin: 20px;
+  padding-top: 15px;
+  padding-bottom: 25px;
+}
+
+.restaurants {
+  background-color: rgb(246, 245, 245);
+  padding-top: 3rem;
+}
+
+.restaurants .container {
+  margin: 20px;
+}
+
 body, html {
   margin: 0 auto;
   font-family: "Roboto", sans-serif;
 }
 
-.main_index {
-  margin: 20px;
+h1 {
+  font-size: 20px;
 }
 
 h2 {
@@ -35,19 +163,15 @@ h3 {
   padding: 1rem;
 }
 
-h1 {
-  font-size: 1.5rem;
-}
-
 button {
   background-image: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
   color: white;
   padding-inline: 4rem;
   border-radius: 100px;
   cursor: pointer;
-  padding: 20px 45px;
+  padding: 13px 20px;
   border: 0;
-  font-size: 1.1rem;
+  font-size: 13px;
   font-weight: 500;
 }
 button:hover {
@@ -122,12 +246,13 @@ header .logo img {
 }
 header h1 {
   text-align: center;
+  font-size: 25px;
 }
 header p {
   text-align: center;
   font-size: 1rem;
   font-weight: lighter;
-  margin: 1rem 1.5rem;
+  padding-bottom: 5px;
 }
 
 .cards {
@@ -170,19 +295,20 @@ header p {
 .card .card_footer {
   justify-content: space-between;
 }
-.card .fa-heart {
+
+.card_like .fa-heart {
   position: relative;
 }
-.card .fa-heart:hover {
+.card_like .fa-heart:hover {
   transition: opacity 200ms ease-in-out;
 }
-.card .fa-heart:hover::after {
+.card_like .fa-heart:hover::after {
   opacity: 0;
 }
-.card .fa-heart:hover::before {
+.card_like .fa-heart:hover::before {
   opacity: 1;
 }
-.card .fa-heart::after {
+.card_like .fa-heart::after {
   opacity: 1;
   font-weight: 100;
   align-self: center;
@@ -194,10 +320,9 @@ header p {
   left: 0;
   content: "\f004";
 }
-.card .fa-heart::before {
+.card_like .fa-heart::before {
   opacity: 0;
   background: linear-gradient(#9356DC, #FF79DA);
-  #background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: opacity 400ms ease-out;
@@ -212,8 +337,9 @@ header p {
 .menu_header .arrow {
   font-size: 20px;
   margin: 1rem;
-  left: 3rem;
-  position: absolute;
+}
+.menu_header :visited {
+  color: black;
 }
 
 .header_img img {
@@ -251,6 +377,7 @@ header p {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  margin: 10px;
 }
 
 .line {
@@ -281,8 +408,6 @@ header p {
   position: relative;
   cursor: pointer;
   white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
   transition: padding-right 450ms ease-in-out;
 }
 .meals:hover {
@@ -302,8 +427,8 @@ header p {
 }
 .last_line p {
   margin: 0;
-  text-overflow: ellipsis;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .cross {
@@ -324,100 +449,6 @@ header p {
 .cross .fa-check-circle {
   color: #fff;
   transition: transform 500ms ease-in-out;
-}
-
-.loader {
-  background-color: rgba(255, 255, 255, 0.9);
-  z-index: 10;
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  left: 0;
-  top: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.loader:after {
-  content: " ";
-  display: block;
-  width: 64px;
-  height: 64px;
-  margin: 8px;
-  border-radius: 50%;
-  border: 6px solid;
-  border-color: #9356DC transparent #FF79DA transparent;
-  animation: loader 1s ease-in-out 3s forwards;
-}
-
-.localisation {
-  display: flex;
-  justify-content: center;
-  background-color: rgb(224, 223, 223);
-  font-size: 1.1rem;
-  font-weight: 400;
-  border-top: rgb(246, 245, 245);
-  border-top-style: solid;
-  padding: 11px;
-  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
-}
-.localisation i {
-  position: relative;
-  right: 25px;
-}
-
-.hero {
-  text-align: center;
-  background-color: rgb(246, 245, 245);
-  padding: 2rem;
-  padding-bottom: 3rem;
-}
-
-@media (min-width: 64rem) {
-  .tuto {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 1rem;
-  }
-}
-.tuto_step {
-  padding: 1.5rem;
-  margin: 1rem 0 1rem 0.75rem;
-  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
-  border-radius: 1.25rem;
-  background-color: #f6f6f6;
-  display: flex;
-  position: relative;
-  cursor: pointer;
-}
-.tuto_step:hover {
-  background-color: #E5CDEE;
-}
-.tuto_step:hover i {
-  color: #9356DC;
-}
-.tuto_step_content {
-  font-weight: 500;
-}
-.tuto_step_content .tuto_icon {
-  margin-right: 3rem;
-  margin-left: 2rem;
-  color: #7e7e7e;
-  font-size: 20px;
-}
-.tuto_step_number {
-  z-index: 1;
-  background-color: #9356DC;
-  height: 1.5rem;
-  width: 1.5rem;
-  border-radius: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  position: absolute;
-  left: -0.75rem;
 }
 
 /*# sourceMappingURL=style.css.map */
