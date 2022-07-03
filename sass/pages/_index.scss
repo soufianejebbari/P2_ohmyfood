@@ -22,70 +22,72 @@
   padding-bottom: 3rem;
 }
 
-
 .tuto {
+  margin: 20px;
+  padding-top: 15px;
+  padding-bottom: 25px;
+
+  &_steps {
     @media (min-width: 64rem) {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       column-gap: 1rem;
     }
-
-  &_step {
-    padding: 1.4rem;
-    margin: 1rem 0 1rem 0.75rem;
-    box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
-    border-radius: 1.25rem;
-    background-color: #f6f6f6;
-
-    position: relative;
-    cursor: pointer;
-
-
-    &:hover {
-      background-color: #E5CDEE;
-    }
-
-    &:hover i {
-      color: $color-primary;
-    }
-  }
-
-    .tuto_icon {
-      margin-right: 1rem;
-      margin-left: 1rem;
-      color: #7e7e7e;
-    }
-
-  &_step_content {
-    font-weight: 500;
-  }
-
-  &_step_number {
-    z-index: 1;
-    background-color: $color-primary;
-    height: 1.5rem;
-    width: 1.5rem;
-    border-radius: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    position: absolute;
-    left: -0.75rem;
   }
 }
 
-.tuto_container{
-  margin: 20px;
-  padding-top: 15px;
-  padding-bottom: 25px;
+.tuto_step {
+  padding: 1.4rem;
+  margin: 1rem 0 1rem 0.75rem;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+  border-radius: 1.25rem;
+  background-color: #f6f6f6;
+
+  position: relative;
+  cursor: pointer;
+
+
+  &:hover {
+    background-color: #E5CDEE;
+  }
+
+  &:hover i {
+    color: $color-primary;
+  }
 }
+
+
+.tuto_step_icon {
+  margin-right: 1rem;
+  margin-left: 1rem;
+  color: #7e7e7e;
+}
+
+.tuto_step_content {
+  font-weight: 500;
+}
+
+.tuto_step_number {
+  z-index: 1;
+  background-color: $color-primary;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: absolute;
+  left: -0.75rem;
+}
+
 
 .restaurants {
   background-color: $light-gray;
   padding-top: 3rem;
 }
-.restaurants .container{
+
+.restaurants .container {
   margin: 20px;
 
 }

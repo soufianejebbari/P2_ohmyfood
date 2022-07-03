@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/soufianejebbari/P2_ohmyfood/issues"
   },
-  "homepage": "https://github.com/soufianejebbari/P2_ohmyfood#readme"
+  "homepage": "https://github.com/soufianejebbari/P2_ohmyfood#readme",
+  "dependencies": {
+    "sass": "^1.53.0"
+  }
 }
