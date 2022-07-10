@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
   },
   "repository": {
     "type": "git",
@@ -13,10 +14,15 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/soufianejebbari/P2_ohmyfood/issues"
+    "url": "https://github.com/soufianejebbari/P2_ohmyfood/issues",
+    "browserslist": "last 4 versions"
   },
   "homepage": "https://github.com/soufianejebbari/P2_ohmyfood#readme",
   "dependencies": {
+    "autoprefixer": "^10.4.7",
     "sass": "^1.53.0"
+  },
+  "devDependencies": {
+    "postcss-cli": "^10.0.0"
   }
 }
