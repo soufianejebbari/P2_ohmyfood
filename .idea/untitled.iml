@@ -11,5 +11,7 @@
     </content>
     <orderEntry type="jdk" jdkName="RVM: ruby-2.7.5" jdkType="RUBY_SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="93a6073045" level="application" />
+    <orderEntry type="library" name="normalize" level="application" />
   </component>
 </module>
